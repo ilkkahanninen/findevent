@@ -1,0 +1,36 @@
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-rock:before {
+	content: "\e000";
+}
+.flaticon-acoustic:before {
+	content: "\e001";
+}
+.flaticon-electronic:before {
+	content: "\e002";
+}
+.flaticon-dj:before {
+	content: "\e003";
+}
+.flaticon-jazz:before {
+	content: "\e004";
+}
+.flaticon-music:before {
+	content: "\e005";
+}
+.flaticon-metal:before {
+	content: "\e006";
+}
+.flaticon-opera:before {
+	content: "\e007";
+}
+.flaticon-folk:before {
+	content: "\e008";
+}
+.flaticon-classical:before {
+	content: "\e009";
+}

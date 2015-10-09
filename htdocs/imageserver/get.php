@@ -35,6 +35,10 @@ if (isset($_GET['image']) && isset($PROFILES[$profileName])) {
       $source_img = new SimpleImage();
       $source_img->load($source);
       
+      if ($source_img->getWidth() > 1200) {
+        $source_img->resizeToWidth(1200);
+      }
+      
       foreach ($profile as $action) {
         switch ($action[0]) {
           case 'crop':

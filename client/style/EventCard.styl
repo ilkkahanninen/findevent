@@ -1,0 +1,60 @@
+.eventCard {
+  position relative
+  min-height 300px
+  background-size cover
+  border 1px solid #101010
+  cursor pointer
+  
+  &:hover {
+    .eventCardContent {
+      .title, .details {
+        min-width 80%
+      }
+    }
+    .avatar {
+      transform scale(1.2, 1.2)
+    }
+  }
+
+  .avatar {
+    position absolute
+    bottom 15px
+    left 15px
+    z-index 10
+    transition transform 300ms
+  }
+  
+  .eventCardContent {  
+    position absolute
+    bottom 15px
+    left 40px
+    right 15px
+    
+    .title, .details {
+      clear both
+      display block
+      float left
+      padding 5px 15px 5px 45px
+      min-width 10%
+      transition min-width 300ms
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+      max-width 80%
+    }
+    
+    .title {
+      color black
+      font-weight 100
+      background white
+      font-size 20px
+    }
+    
+    .details {
+      color white
+      background rgba(0, 0, 0, 0.8)
+      font-size 15px
+    }
+  }
+}
+

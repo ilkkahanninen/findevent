@@ -17,6 +17,10 @@ module.exports = {
         loader: 'babel'
       },
       {
+        test: /\.css?$/,
+        loader: 'css-loader'
+      },
+      {
         test: /\.styl?$/,
         loader: 'style-loader!css-loader!stylus-loader'
       }

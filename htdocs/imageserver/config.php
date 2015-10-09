@@ -8,9 +8,9 @@ $PROFILES = array(
     array('crop', 1 / 1),
     array('width', 200)
   ),
-  'banner' => array(
-    array('crop', 1000 / 400),
-    array('width', 1000),
+  'card' => array(
+    array('crop', 800 / 300),
+    array('width', 800),
   ),
   'cover' => array(
     array('width', 1000)

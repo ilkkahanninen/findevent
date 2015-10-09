@@ -14,6 +14,8 @@
     "browser-sync": "^2.9.10",
     "browser-sync-webpack-plugin": "^1.0.0",
     "css-loader": "^0.19.0",
+    "firebase": "^2.3.1",
+    "lodash": "^3.10.1",
     "powerchord": "^0.2.2",
     "powergrid": "^0.4.0",
     "react": "^0.13.3",
