@@ -1,0 +1,4 @@
+node_modules/
+htdocs/client/
+htdocs/imageserver/images/
+htdocs/imageserver/cache/

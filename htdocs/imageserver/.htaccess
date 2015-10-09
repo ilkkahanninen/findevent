@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^(\w+\.(png|jpg|gif))/?$ get.php?image=$1
+RewriteRule ^(\w+)/(\w+\.(png|jpg|gif))/?$ get.php?profile=$1&image=$2
