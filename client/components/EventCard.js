@@ -8,16 +8,17 @@ require('style/EventCard.styl');
 export default class EventCard extends React.Component {
   render() {
     
-    const {index, type, ...props} = this.props;
-    
+    const {id, index, type, ...props} = this.props;
     const coverStyle = {
-      backgroundImage: this.props.image ? 'url(http://localhost/events/imageserver/card/' + this.props.image + ')' : null
+      backgroundImage: this.props.image ? 'url(http://localhost/events/imageserver/card/' + id + '.jpg)' : null
     };
     
     let size = {sm: 6, lg: 4};
     if (index >= 6) {
       size = {sm: 6, lg: 3};
     }
+    
+    console.log(id, props, coverStyle);
     
     return (
       <Column {...size} className="eventCard" style={coverStyle}>
@@ -26,9 +27,9 @@ export default class EventCard extends React.Component {
         </Avatar>
         <div className="eventCardContent">
           <div className="title">
-            {this.props.title}
+            {props.title}
           </div>
-          <div className="details">{this.props.time}, {this.props.location}</div>
+          <div className="details">{props.time}, {props.location}</div>
         </div>
       </Column>
     );
