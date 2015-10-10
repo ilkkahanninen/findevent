@@ -1,6 +1,8 @@
 import React from 'react';
 import {Container, Row, Column} from 'components/Grid';
+import AppBar from 'components/AppBar';
 import EventCard from 'components/EventCard';
+
 import _ from 'lodash';
 
 import Firebase from 'firebase';
@@ -42,11 +44,14 @@ export default class App extends React.Component {
   
   render() {
     return (
-      <Container>
-        <Row>
-          {_.toArray(this.state.events).map((event, index) => <EventCard {...event} index={index} />)}
-        </Row>
-      </Container>
+      <div>
+        <AppBar title="Kalenteri LOL 1234" />
+        <Container>
+          <Row>
+            {_.toArray(this.state.events).map((event, index) => <EventCard {...event} index={index} />)}
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
