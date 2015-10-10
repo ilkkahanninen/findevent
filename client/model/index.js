@@ -13,21 +13,28 @@ export class ViewComponent extends React.Component {
   }
   
   addValueListener(child, callback) {
-    this._listeners.push({child, on: 'value', callback: callback.bind(this)});
+    let ref = child ? Model.child(child) : Model;
+    callback = callback.bind(this);
+    
+    this._listeners.push({
+      on: () => ref.on('value', callback),
+      off: () => ref.off('value', callback)
+    });
+  }
+
+  addAuthListener(callback) {
+    callback = callback.bind(this);
+    this._listeners.push({
+      on: () => Model.onAuth(callback),
+      off: () => Model.offAuth(callback)
+    });
   }
   
   componentWillMount() {
-    this._listeners.forEach((listener) => {
-      if (!listener._ref) {
-        listener._ref = listener.child ? Model.child(listener.child) : Model;
-      }
-      listener._ref.on(listener.on, listener.callback);
-    });
+    this._listeners.forEach((listener) => listener.on());
   }
   
   componentWillUnmount() {
-    this._listeners.forEach((listener) => {
-      listener._ref.off(listener.on, listener.callback);
-    });
+    this._listeners.forEach((listener) => listener.off());
   }
 }

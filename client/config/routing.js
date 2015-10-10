@@ -4,6 +4,7 @@ import App from 'App';
 
 import MainView from 'views/MainView';
 import EventView from 'views/EventView';
+import LoginView from 'views/LoginView';
 
 import ReactRouter from 'react-router';
 
@@ -14,6 +15,7 @@ export default class Routing extends React.Component {
         <Route path="/" component={App}>
           <IndexRoute component={MainView} />
           <Route path="event/:id" component={EventView} />
+          <Route path="login" component={LoginView} />
         </Route>
       </Router>
     );
