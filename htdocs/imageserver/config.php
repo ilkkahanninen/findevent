@@ -12,7 +12,8 @@ $PROFILES = array(
     array('crop', 800 / 300),
     array('width', 800),
   ),
-  'cover' => array(
+  'banner' => array(
+    array('crop', 1000 / 300),
     array('width', 1000)
   ),
   'opengraph' => array(

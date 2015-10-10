@@ -2,7 +2,8 @@ import React from 'react';
 
 export class Container extends React.Component {
   render() {
-    return <div className="container">{this.props.children}</div>;
+    const {children, className, ...props} = this.props;
+    return <div className={"container " + className} {...props}>{children}</div>;
   }
 }
 
@@ -15,7 +16,7 @@ export class Row extends React.Component {
 export class Column extends React.Component {
   render() {
     let classes = [];
-    let {children, className, style, ...sizes} = this.props;
+    let {children, className, style, onClick, ...sizes} = this.props;
     
     if (className) {
       classes.push(className);
@@ -24,6 +25,6 @@ export class Column extends React.Component {
       classes.push('col-' + key + '-' + sizes[key]);
     }
          
-    return <div className={classes.join(' ')} style={style}>{children}</div>;
+    return <div className={classes.join(' ')} onClick={onClick} style={style}>{children}</div>;
   }
 }
