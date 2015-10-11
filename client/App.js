@@ -15,7 +15,6 @@ export default class App extends ViewComponent {
   }
   
   render() {
-    console.log(this.state.auth);
     return (
       <div>
         <AppBar
